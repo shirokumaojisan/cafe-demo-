@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+
+/* お店について */
+
+#about {
+    margin-bottom: 120px;
+}
+
+#about.flex {
+    flex-direction: row-reverse;
+}
+
+#about .section-title {
+    margin-left: 80px;
+}
+
+#about .img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+#about .inner {
+    margin: auto auto 0 0;
+}
+
+#about .inner .title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#about .inner .text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+
+
+/* menu */
+
+#menu {
+    margin-bottom: 120px;
+}
+
+#menu .section-title {
+    writing-mode: horizontal-tb;
+    margin-bottom: 40px;
+}
+
+#menu .item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#menu .item img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+#menu .item figure:first-child {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+/* time */
+
+#time {
+    margin-bottom: 120px;
+}
+
+#time .section-title {
+    margin-right: 100px;
+}
+
+#time .img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+#time .inner {
+    margin: auto 0 0 auto;
+}
+
+#time .inner .title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#time .inner .text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+
+
+/*------------------------------------------ 
+タブレット 
+------------------------------------------------------*/
+@media (max-width: 1024px) {}
+
+/*------------------------------------------ 
+スマートフォン 
+------------------------------------------------------*/
+
+@media (max-width: 767px) {
+
+
+
+    /* about */
+
+    #about {
+        margin-bottom: 60px;
+    }
+
+    #about.flex {
+        flex-direction: column;
+    }
+
+    #about .section-title {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    #about .img {
+        margin-bottom: 40px;
+    }
+
+    #about .inner {
+        margin: 0;
+    }
+
+    #about .inner .text {
+        margin-bottom: 30px;
+    }
+
+    /* menu */
+
+    #menu {
+        margin-bottom: 60px;
+    }
+
+    #menu .section-title {
+        margin-bottom: 20px;
+    }
+
+    #menu .item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #menu .item figure:first-child {
+        grid-column: 1/1;
+        grid-row: 1/1;
+    }
+
+
+    /* time */
+
+    #time {
+        margin-bottom: 60px;
+    }
+
+    #time.flex {
+        flex-direction: column;
+    }
+
+    #time .section-title {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #time .img {
+        margin-bottom: 40px;
+    }
+
+    #time .inner {
+        margin: 0;
+    }
+
+    #time .inner .text {
+        margin-bottom: 30px;
+    }
+
+
+
+}

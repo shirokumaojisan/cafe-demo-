@@ -1,0 +1,501 @@
+@charset "UTF-8";
+
+/* 共通 */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #F5F0E6;
+  color: #3A2F2A;
+  font-weight: 400;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  color: #777;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+iframe {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.wrapper {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+
+.section-title {
+  font-size: 24px;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  writing-mode: vertical-lr;
+}
+
+.btn {
+  position: relative;
+  padding: 10px 80px;
+  font-size: 16px;
+  color: #777;
+  border: 1px solid #777;
+  border-radius: 30px;
+}
+
+.btn::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #777;
+  position: absolute;
+  top: 23px;
+  left: 170px;
+}
+
+.btn::after {
+  content: "";
+  width: 15px;
+  height: 1px;
+  background-color: #777;
+  position: absolute;
+  top: 19px;
+  left: 195px;
+  transform: rotate(30deg);
+}
+
+
+/* fadein */
+
+.fade-text{
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade-text.inview{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-img{
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(6px);
+  transition: all 1.4s ease-out;
+}
+
+.fade-img.inview{
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+
+.fade-img2{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.4s ease-out;
+}
+
+.fade-img2.inview{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-section{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.6s ease;
+}
+
+.fade-section.inview{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay1{transition-delay:0.2s;}
+.delay2{transition-delay:0.4s;}
+.delay3{transition-delay:0.6s;}
+.delay4{transition-delay:0.8s;}
+
+/* 
+<p class="fade-text delay1">静かな時間があります。</p>
+<p class="fade-text delay2">本を読む人が多いです。</p>
+<p class="fade-text delay3">何もしなくても大丈夫です。</p> */
+
+/* グーグルフォントの書き方
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.zen-old-mincho-regular {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-old-mincho-bold {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 700;
+  font-style: normal;
+} */
+
+
+/* header */
+
+#header .logo {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  z-index: 20;
+}
+
+#header .navi {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+}
+
+#header .logo a {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#header h1 {
+  line-height: 0;
+}
+
+#header .navi .menu {
+  display: flex;
+  align-items: center;
+}
+
+#header .navi li {
+  margin-right: 30px;
+}
+
+#header .navi li a {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* mainvisual */
+
+.mainvisual {
+  position: relative;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.mainvisual .img {
+  position: relative;
+}
+
+.mainvisual .img img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.mainvisual .img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mainvisual .text {
+  font-size: 24px;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.1em;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-shadow: 2px 2px 0 #777;
+}
+
+/* アクセス */
+
+#accese {
+  margin-bottom: 120px;
+}
+
+#accese.flex {
+  flex-direction: row-reverse;
+}
+
+#accese .section-title {
+  margin-left: 80px;
+}
+
+#accese .map-img img {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+#accese dl {
+  margin-right: auto;
+  font-size: 16px;
+}
+
+#accese dt {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#accese dd {
+  margin-bottom: 20px;
+}
+
+/* footer */
+
+#footer {
+  text-align: center;
+}
+
+#footer .logo {
+  margin-bottom: 30px;
+}
+
+#footer .logo a {
+  color: #3A2F2A;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#footer .navi .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+#footer .navi .menu li a {
+  color: #3A2F2A;
+}
+
+#footer .sns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+#footer .sns img {
+  width: 32px;
+}
+
+#footer .copy-right {
+  background-color: #3A2F2A;
+  color: #fff;
+  font-size: 14px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*-----------------------------------------------------------
+ タブレット
+ --------------------------------------------------------- */
+@media(max-width: 1024px) {}
+
+/*-----------------------------------------------------------
+　スマホ
+ -----------------------------------------------------------*/
+
+@media(max-width: 767px) {
+
+  /* 共通 */
+
+  .section-title {
+    font-size: 20px;
+    writing-mode: horizontal-tb;
+  }
+
+  /* header */
+
+  #header .logo a {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  #header .navi {
+    width: 100%;
+    max-width: 40vw;
+    height: 100vh;
+    top: 0;
+    right: -50vw;
+    padding: 100px 60px 100px 0;
+    background-color: #fff;
+  }
+
+  #header .navi .menu {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  #header .navi .menu li {
+    margin-right: 0;
+    margin-top: 30px;
+  }
+
+  #header .navi li a {
+    color: #333;
+    font-size: 16px;
+  }
+
+  #header .navi.active {
+    right: 0;
+    transition: all 0.5s;
+  }
+
+  body.active {
+    overflow-y: hidden;
+  }
+
+  /* hamburger */
+
+  #header .hamburger {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 30;
+  }
+
+  #header .hamburger span {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.5s;
+  }
+
+  #header .hamburger span:nth-of-type(1) {
+    top: 15px;
+    left: 10px;
+  }
+
+  #header .hamburger span:nth-of-type(2) {
+    top: 23px;
+    left: 10px;
+  }
+
+  #header .hamburger span:nth-of-type(3) {
+    top: 32px;
+    left: 10px;
+  }
+
+  #header .hamburger.active span:nth-of-type(1) {
+    top: 30px;
+    transform: rotate(30deg);
+    background-color: #333;
+  }
+
+  #header .hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  #header .hamburger.active span:nth-of-type(3) {
+    top: 30px;
+    transform: rotate(-30deg);
+    background-color: #333;
+  }
+
+  /* mainvisual */
+
+  .mainvisual {
+    margin-bottom: 60px;
+  }
+
+  .mainvisual .text {
+    font-size: 20px;
+  }
+
+  .mainvisual .img img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* アクセス */
+
+  #accese {
+    margin-bottom: 60px;
+  }
+
+  #accese.flex {
+    flex-direction: column;
+  }
+
+  #accese .section-title {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  #accese .map-img {
+    margin-bottom: 20px;
+  }
+
+  /* footer */
+
+  #footer .logo a {
+    font-size: 32px;
+  }
+
+  #footer .navi .menu {
+    padding: 0 20px;
+    gap: 15px;
+  }
+
+  #footer .navi .menu li a {
+    font-size: 14px;
+  }
+}
