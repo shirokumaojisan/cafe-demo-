@@ -13,6 +13,7 @@ $(function () {
     $(this).removeClass("active");
     $("#header .hamburger").removeClass("active");
     $("body").removeClass("active");
+    $("#header .navi").removeClass("active");
   });
 
 });
